@@ -2,13 +2,13 @@
   "name": "@hunty/web",
   "version": "0.1.0",
   "private": true,
-  "description": "Hunty web application — Next.js 15 App Router",
+  "description": "Hunty web application \u2014 Next.js 15 App Router",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
     "analyze": "ANALYZE=true next build",
     "bundle:check": "node scripts/check-bundle-size.mjs",
-    "start": "next start",
+    "start": "node init && next start",
     "lint": "eslint . --max-warnings 0",
     "typecheck": "tsc --noEmit && tsc --noEmit --project tsconfig.test.json",
     "test": "vitest --run",
@@ -25,7 +25,7 @@
     "perf:budget": "node scripts/check-performance-budgets.mjs",
     "perf:budget:update": "node scripts/update-bundle-budgets.mjs",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "node init && storybook build",
     "clean": "rm -rf .next"
   },
   "dependencies": {
